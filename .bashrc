@@ -561,3 +561,9 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 # Install Starship - curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+
+#######################################################
+# Flutter path
+#######################################################
+export PATH="$HOME/dev/flutter/bin:$PATH"
+export CHROME_EXECUTABLE="/var/lib/flatpak/app/com.brave.Browser/current/active/export/bin/com.brave.Browser"
