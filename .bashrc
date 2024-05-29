@@ -113,7 +113,7 @@ alias web='cd /var/www/html'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Edit this .bashrc file
-alias ebrc='edit ~/.bashrc'
+alias vbrc='vim ~/.bashrc'
 
 # Show help for this .bashrc file
 alias hlp='less ~/.bashrc_help'
@@ -223,8 +223,10 @@ alias sha1='openssl sha1'
 alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
 
 # KITTY - alias to be able to use kitty features when connecting to remote servers(e.g use tmux on remote server)
-
 alias kssh="kitty +kitten ssh"
+
+# Alias to update dnf packages
+alias upgrade="sudo dnf upgrade"
 
 #######################################################
 # SPECIAL FUNCTIONS
@@ -556,11 +558,11 @@ lazyg() {
 alias hug="hugo server -F --bind=10.0.0.97 --baseURL=http://10.0.0.97"
 bind '"\C-f":"zi\n"'
 
-export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
+# export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bin:/.local/share/flatpak/exports/bin"
 
 # Install Starship - curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init bash)"
-eval "$(zoxide init bash)"
+# eval "$(zoxide init bash)"
 
 #######################################################
 # Flutter path
