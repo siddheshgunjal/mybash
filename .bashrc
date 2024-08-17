@@ -226,7 +226,7 @@ alias clickpaste='sleep 3; xdotool type "$(xclip -o -selection clipboard)"'
 alias kssh="kitty +kitten ssh"
 
 # Alias to update dnf & flatpak packages
-alias upgrade="sudo dnf upgrade && sudo flatpak update"
+alias upgrade="sudo dnf upgrade && sudo flatpak update && needs-restarting -r"
 
 #######################################################
 # SPECIAL FUNCTIONS
